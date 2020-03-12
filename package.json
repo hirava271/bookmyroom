@@ -18,8 +18,18 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:CI": "CI=true react-scripts test",
+    "test:watch": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prettier:fix": "prettier --write '**/*.{scss,tsx,ts,js}'",
+    "prettier": "prettier --check '**/*.{scss,tsx,ts,js}'",
+    "lint": "eslint './src/**'",
+    "lint:fix": "eslint --fix './src/**'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm run prettier && npm run test:CI"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,6 +53,7 @@
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.3",
     "prettier": "^1.19.1"
   }
 }
