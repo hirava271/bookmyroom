@@ -23,8 +23,8 @@
     "eject": "react-scripts eject",
     "prettier:fix": "prettier --write '**/*.{scss,tsx,ts,js}'",
     "prettier": "prettier --check '**/*.{scss,tsx,ts,js}'",
-    "lint": "eslint './src/**'",
-    "lint:fix": "eslint --fix './src/**'"
+    "lint": "eslint 'web/src/**'",
+    "lint:fix": "eslint --fix 'web/src/**'"
   },
   "husky": {
     "hooks": {
