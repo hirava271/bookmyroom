@@ -1,5 +1,5 @@
 {
-  "name": "bookmyroom",
+  "name": "web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,8 +23,8 @@
     "eject": "react-scripts eject",
     "prettier:fix": "prettier --write '**/*.{scss,tsx,ts,js}'",
     "prettier": "prettier --check '**/*.{scss,tsx,ts,js}'",
-    "lint": "eslint 'web/src/**'",
-    "lint:fix": "eslint --fix 'web/src/**'"
+    "lint": "eslint 'src/**'",
+    "lint:fix": "eslint --fix 'src/**'"
   },
   "husky": {
     "hooks": {
@@ -34,6 +34,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "http://localhost:8080",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -49,6 +50,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.23.0",
     "@typescript-eslint/parser": "^2.23.0",
+    "axios": "^0.19.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
