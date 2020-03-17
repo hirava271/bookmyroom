@@ -1,0 +1,8 @@
+public/**/*
+build/**/*
+**/*.svg
+**/*.scss
+*.css
+src/serviceWorker.ts
+
+package-lock.json

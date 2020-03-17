@@ -11,6 +11,7 @@ function App(): JSX.Element {
                 setHello(response.data);
             });
         }
+
         getName().then();
     });
 
