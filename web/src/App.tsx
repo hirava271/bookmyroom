@@ -1,25 +1,33 @@
 import React, { useEffect, useState } from 'react';
 // eslint-disable-next-line no-unused-vars
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
+// eslint-disable-next-line no-unused-vars
+import { Room } from '../../api/src/rooms/interfaces/room.interface';
 
 function App(): JSX.Element {
-    const [hello, setHello] = useState<string>('');
+    const [rooms, setRooms] = useState<Room[]>([]);
 
     useEffect(() => {
-        async function getName() {
-            await axios.get('/api/test').then((response: AxiosResponse) => {
-                setHello(response.data);
-            });
-        }
-
-        getName().then();
-    });
+        axios.get<Room[]>('/api/rooms').then(response => {
+            setRooms(response.data);
+        });
+    }, []);
 
     return (
         <div>
-            <label htmlFor="selectedDate">Select Date:</label>
-            <input type="date" name="selectedDate" />
-            <div>{hello}</div>
+            <div>
+                <label htmlFor="selectedDate">Select Date:</label>
+                <input type="date" name="selectedDate" />
+            </div>
+
+            {rooms.length > 0 &&
+                rooms.map((room: Room, index: number) => {
+                    return (
+                        <div key={index}>
+                            <span>{room.name}</span>
+                        </div>
+                    );
+                })}
         </div>
     );
 }
