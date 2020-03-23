@@ -10,4 +10,9 @@ export class RoomsService {
     async getAll(): Promise<Room[]> {
         return this.roomModel.find().exec();
     }
+
+    async addRoom(beingAddedRoom: Room): Promise<Room> {
+        const savedRoom = new this.roomModel(beingAddedRoom);
+        return savedRoom.save();
+    }
 }
