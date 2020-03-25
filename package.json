@@ -4,7 +4,7 @@
     "description": "",
     "main": "api/src/main.ts",
     "scripts": {
-        "start:prod": "node api/dist/main.js",
+        "start": "node api/dist/main.js",
         "heroku-postbuild": "cd web && npm install && npm run build"
     },
     "repository": {
