@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "npm install && node main.ts"
+        "start": "npm install && node api/src/main.ts"
     },
     "repository": {
         "type": "git",
