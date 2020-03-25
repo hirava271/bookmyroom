@@ -1,0 +1,19 @@
+{
+    "name": "package.json",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node main.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hirava271/bookmyroom.git"
+    },
+    "author": "Hirava Anaghan",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hirava271/bookmyroom/issues"
+    },
+    "homepage": "https://github.com/hirava271/bookmyroom#readme"
+}
